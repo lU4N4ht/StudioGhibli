@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+:root{
+    --bg_color: #9eced5;
+    --header_color_bg: #5a949c;
+    --tittle_color: #1a1a1a;
+    --tittle_font: 'Roboto Condensed', sans-serif;
+    --tittle_color_hover: #f8f8ff;
+    --text_font: 'Raleway', sans-serif;
+    --text_color: #101010;
+}
+body{
+    background-color: var(--bg_color);
+    font-family: var(--text_font);
+    background-size: cover;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 230px 1fr 100px;
+}
+header{
+    height: auto;
+    background-color: var(--header_color_bg);
+    padding: 1em;
+    gap: 5em;
+    position: relative;
+    display: flex;
+    font-size: 1.3rem;
+    justify-content: space-between;
+    font-family: var(--tittle_font);
+}
+img[alt~=logo]{
+    width: 19em;
+    height: 9em;
+    padding-left: 2em;
+}
+.navbar{
+    padding-right: 4em;
+    color: var(--tittle_color);
+    font-weight: 500 ;
+    display: flex;
+    gap: 8.75em;
+    align-items: center;
+}
+ul.navbar > a{
+    color: var(--tittle_color);
+    display: inline-block;
+    position: relative;
+    font-size: 1.25em;
+    cursor: pointer;
+    transition: 0.4s all ease;
+}
+ul.navbar > a:hover{
+    transition: 0.4s all ease;
+    color: var(--tittle_color_hover);
+}
+main{
+    display: grid;
+    padding: 1em;
+}
+.information{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4em;
+}
+img[alt~=main_text_photo]{
+    width: 40em;
+    height: 32em;
+    transform: scaleX(-1);
+}
+.main_text{
+    padding-top: 3%;
+    width: 19em;
+    font-size: 2em;
+    color: var(--text_color);
+    text-align: justify;
+}
+.main_tittle{
+    padding-top: 4em;
+    display: flex;
+    justify-content: center;
+}
+.tittle{
+    font-family: var(--tittle_font);
+    color: var(--tittle_color);
+    font-size: 3em;
+}
+.container{
+    display: flex;
+    overflow-x: scroll;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 2em;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 2em;
+    gap: 1em;
+    margin: 2rem auto;
+    width: 17.4375em;
+    height: 25em;
+}
+.container .movies{
+    flex: 0 0 100%;
+    padding: 2em;
+    scroll-snap-align: start;
+}
