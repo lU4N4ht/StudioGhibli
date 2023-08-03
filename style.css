@@ -12,6 +12,7 @@
     --text_font: 'Raleway', sans-serif;
     --black: #101010;
     --light_blue: #C7E1E4;
+    --dark_green: #284747;
 }
 body{
     background-color: var(--bg_color);
@@ -67,13 +68,13 @@ ul.navbar > a{
 }
 ul.navbar > a:hover{
     transition: 0.4s all ease;
-    color: var(--black);
+    color: var(--dark_green);
 }
 .navbar .button__official_site{
     width: 10em;
     height: 2.5em;
     border-radius: 3em;
-    color: var(--black);
+    color: var(--dark_green);
     background-color: var(--white);
     display: flex;
     align-items: center;
@@ -92,7 +93,8 @@ main{
     justify-content: center;
     display: grid;
 }
-main .main__bg{
+.information_container{
+    position: relative;
     width: 100em;
     height: 40em;
     border-radius: 2em;
@@ -102,25 +104,17 @@ main .main__bg{
     justify-content: center;
     gap: 4em;
 }
-img[alt~=main_text_photo]{
-    width: 40em;
-    height: 32em;
-    transform: scaleX(-1);
-}
-.main_text{
-    padding-top: 3%;
-    width: 19em;
-    font-size: 2em;
-    color: var(--text_color);
-    text-align: justify;
-}
-.main_tittle{
-    padding-top: 4em;
+.slides{
     display: flex;
-    justify-content: center;
+    gap: 4em;
+    align-items: center;
 }
-.tittle{
-    font-family: var(--tittle_font);
-    color: var(--tittle_color);
-    font-size: 3em;
+.text{
+    font-size: 1.5em;
+    text-align: justify;
+    width: 15em;
 }
+.prev, .next {
+    cursor: pointer;
+}
+
